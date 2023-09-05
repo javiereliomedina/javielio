@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "javielio",
+    "title": "Javier Elío",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Hi!\nI am Javi, I am Assistant Professor at the Department of Mechanical and Marine Engineering, Høgskulen på Vestlandet (link). I teach Statics and Mechanical of Materials, and Material and Manufacturing, and I really like it!! I hope my students think the same (please if you read this, leave a comment!!)\nI an engineer with 15+ years of research and teaching experience, with a solid background in statistics, spatial data analysis, and modelling. My main research area is environmental science, with a particular interest in natural hazards and climate change. Nowadays, I am at Høgskulen på Vestlandet (Norway), and member of the research group Applied Marine Microbiology at the same university.\n\n\nInterests\n\nEnvironmental risk assessment.\nStatistics, spatial data analysis, and geostatistics.\nGeographic information systems (GIS).\nR language.\n\n\n\nExperience\nAssistant Professor (2022 - present) Western Norway University of Applied Sciences\nPostdoc in Geioinformatics on Migration Modelling (2020 - 2022)\nAalborg Universitet, DK\nAssistant Professor (2019) Western Norway University of Applied Sciences\nPostdoctoral Research Fellow (2016 - 2018) Trinity College Dublin\nResearch Assistant” (2014) Technical Universityof Madrid\nPhD Candidate (2009 - 2013) Ciudad de la Energía Foundation\nResearch Assistant (2007 - 2009) Technical Universityof Madrid\nTunnel Engineer (2005 - 2007) Obrascón Huarte Laín S.A.\n\n\nEducation\n\nPhD in Environmental Science, Technical University of Madrid (2013)\nMSc in Environmental Research, Modelling and Risk Assessment, Technical University of Madrid (2009)\nMEng in Mining Engineering, Technical University of Madrid (2005)"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,40 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "post/post.html",
+    "href": "post/post.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "post/2021_11_03_30DayMapChallenge/index.html",
+    "href": "post/2021_11_03_30DayMapChallenge/index.html",
+    "title": "Day 3 of the #30DayMapChallenge - Polygons",
+    "section": "",
+    "text": "I plotted a wold map (scale 1:60 Million) with color varying by country.\n\nDownload the data from Eurostat, where there are geographic data of:\n\nAdministrative units – statistical units\nPopulation distribution – demography\nTransport networks\nLand cover\nElevation – DEM\n\n\nPackages we are going to use:\n\n  library(sf)\n  library(tidyverse)\n\n\n  World_URL &lt;- \"https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/countries/download/ref-countries-2016-60m.shp.zip\"\n  dir.create(\"Rdata\")\n  download.file(World_URL, destfile = \"Rdata/World.zip\")\n  unzip(zipfile = \"Rdata/World.zip\", exdir   = \"Rdata/World\")\n  unzip(zipfile = \"Rdata/World/CNTR_RG_60M_2016_4326.shp.zip\",\n        exdir   = \"Rdata/World_SHP\")\n  World &lt;- read_sf(\"Rdata/World_SHP/CNTR_RG_60M_2016_4326.shp\")\n  unlink(\"Rdata\", recursive = TRUE)\n\n\nPlot the results with fill = CNTR_ID.\n\n\n  ggplot() +\n    geom_sf(data = World, aes(fill = CNTR_ID)) +\n    labs(title = \"Administrative boundaries at country level of the world\",\n         subtitle = \"Scale 1:60 Million\",\n         caption = \"© EuroGeographics for the administrative boundaries\") +\n    guides(fill = FALSE)"
+  },
+  {
+    "objectID": "post.html",
+    "href": "post.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "Day 3 of the #30DayMapChallenge - Polygons\n\n\n\nR\n\n\nData visualization\n\n\n30DayChallenge\n\n\n\n\n\n\n\nJavier Elío\n\n\nNov 11, 2021\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "Day 3 of the #30DayMapChallenge - Polygons\n\n\n\nR\n\n\nData visualization\n\n\n30DayChallenge\n\n\n\n\n\n\n\nJavier Elío\n\n\nNov 11, 2021\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2021_11_03_30DayMapChallenge/index.html",
+    "href": "posts/2021_11_03_30DayMapChallenge/index.html",
+    "title": "Day 3 of the #30DayMapChallenge - Polygons",
+    "section": "",
+    "text": "I plotted a wold map (scale 1:60 Million) with color varying by country.\n\nDownload the data from Eurostat, where there are geographic data of:\n\nAdministrative units – statistical units\nPopulation distribution – demography\nTransport networks\nLand cover\nElevation – DEM\n\n\nPackages we are going to use:\n\n  library(sf)\n  library(tidyverse)\n\n\n  World_URL &lt;- \"https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/countries/download/ref-countries-2016-60m.shp.zip\"\n  dir.create(\"Rdata\")\n  download.file(World_URL, destfile = \"Rdata/World.zip\")\n  unzip(zipfile = \"Rdata/World.zip\", exdir   = \"Rdata/World\")\n  unzip(zipfile = \"Rdata/World/CNTR_RG_60M_2016_4326.shp.zip\",\n        exdir   = \"Rdata/World_SHP\")\n  World &lt;- read_sf(\"Rdata/World_SHP/CNTR_RG_60M_2016_4326.shp\")\n  unlink(\"Rdata\", recursive = TRUE)\n\n\nPlot the results with fill = CNTR_ID.\n\n\n  ggplot() +\n    geom_sf(data = World, aes(fill = CNTR_ID)) +\n    labs(title = \"Administrative boundaries at country level of the world\",\n         subtitle = \"Scale 1:60 Million\",\n         caption = \"© EuroGeographics for the administrative boundaries\") +\n    guides(fill = FALSE)"
   }
 ]

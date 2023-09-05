@@ -1,0 +1,16 @@
+{
+  "hash": "d356cc2fcfeed13e584f813d858632cf",
+  "result": {
+    "markdown": "---\ntitle: \"Day 3 of the #30DayMapChallenge - Polygons\"\nauthor: \n  - name: Javier Elío\n    url: https://github.com/javiereliomedina\n    orcid: 0000-0003-0624-2345\n    affiliation: Western Norway University of Applied Sciences\n    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio \ndate: 11-11-2021\ncategories: [R, Data visualization, 30DayChallenge]\nimage: featured.jpg\ndraft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!\n---\n\n\n\n\nI plotted a wold map (scale 1:60 Million) with color varying by country. \n\n1) Download the data from [Eurostat](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data), where there are geographic data of: \n\n    + Administrative units – statistical units \n    \n    + Population distribution – demography\n    \n    + Transport networks\n    \n    + Land cover\n    \n    + Elevation – DEM\n\nPackages we are going to use:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n  library(sf)\n  library(tidyverse)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n  World_URL <- \"https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/countries/download/ref-countries-2016-60m.shp.zip\"\n  dir.create(\"Rdata\")\n  download.file(World_URL, destfile = \"Rdata/World.zip\")\n  unzip(zipfile = \"Rdata/World.zip\", exdir   = \"Rdata/World\")\n  unzip(zipfile = \"Rdata/World/CNTR_RG_60M_2016_4326.shp.zip\",\n        exdir   = \"Rdata/World_SHP\")\n  World <- read_sf(\"Rdata/World_SHP/CNTR_RG_60M_2016_4326.shp\")\n  unlink(\"Rdata\", recursive = TRUE)\n```\n:::\n\n\n2) Plot the results with *fill = CNTR_ID*.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n  ggplot() +\n    geom_sf(data = World, aes(fill = CNTR_ID)) +\n    labs(title = \"Administrative boundaries at country level of the world\",\n         subtitle = \"Scale 1:60 Million\",\n         caption = \"© EuroGeographics for the administrative boundaries\") +\n    guides(fill = FALSE)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/plot-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,11 +1,69 @@
 ---
-title: "javielio"
+title: "Javier Elío"
+image: javierelio.jpg
+about: 
+  template: trestles
+  image-shape: round
+  image-width: 23em
+  links:
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/javiereliomedina/
+    - text: Twitter
+      href: https://twitter.com/Elio_Javi
+    - text: GitHub
+      href: https://github.com/javiereliomedina
+    - text: Email
+      href: javiereliomedina@gmail.com
+    - text: Google-scholar
+      href: https://scholar.google.com/citations?user=NF5SYm8AAAAJ&hl=no
 ---
 
-This is a Quarto website.
+# Hi!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I am **Javi**, I am Assistant Professor at the Department of Mechanical and Marine Engineering, Høgskulen på Vestlandet ([link](https://www.hvl.no/en/employee/?user=Javier.Elio)). I teach *Statics and Mechanical of Materials*, and *Material and Manufacturing,* and I really like it!! I hope my students think the same (please if you read this, leave a comment!!)
 
-```{r}
-1 + 1
-```
+I an engineer with 15+ years of research and teaching experience, with a solid background in statistics, spatial data analysis, and modelling. My main research area is environmental science, with a particular interest in natural hazards and climate change. Nowadays, I am at Høgskulen på Vestlandet (Norway), and member of the research group [Applied Marine Microbiology](https://www.hvl.no/en/research/group/applied-marine-microbiology/) at the same university.
+
+# Interests
+
+- Environmental risk assessment.
+
+- Statistics, spatial data analysis, and geostatistics. 
+
+- Geographic information systems (GIS).
+
+- R language.
+
+# Experience 
+
+**Assistant Professor** (2022 - present)
+Western Norway University of Applied Sciences 
+  
+**Postdoc in Geioinformatics on Migration Modelling**  (2020 - 2022)  
+Aalborg Universitet, DK
+
+**Assistant Professor** (2019)
+Western Norway University of Applied Sciences 
+
+**Postdoctoral Research Fellow** (2016 - 2018)
+Trinity College Dublin 
+  
+**Research Assistant"** (2014)
+Technical Universityof Madrid
+
+**PhD Candidate** (2009 - 2013)
+Ciudad de la Energía Foundation
+
+**Research Assistant** (2007 - 2009)
+Technical Universityof Madrid
+
+**Tunnel Engineer** (2005 - 2007)
+Obrascón Huarte Laín S.A.
+  
+# Education
+
+- **PhD in Environmental Science**, Technical University of Madrid (2013)
+
+- **MSc in Environmental Research, Modelling and Risk Assessment**, Technical University of Madrid (2009)
+
+- **MEng in Mining Engineering**, Technical University of Madrid (2005)

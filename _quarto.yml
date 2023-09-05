@@ -8,11 +8,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - posts.qmd
+        
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: minty
+      dark: Superhero
     css: styles.css
     toc: true
 
