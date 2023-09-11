@@ -1,0 +1,20 @@
+---
+title: "The first version of the Pan-European Indoor Radon Map"
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 11-01-2019
+categories: [Radon, Geostatistics, Kriging]
+image: featured.jpg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+abstract: "A hypothetical Pan-European Indoor Radon Map has been developed using summary statistics estimated from 1.2 million indoor radon samples. In this study we have used the arithmetic mean (AM) over grid cells of 10km × 10km to predict a mean indoor radon concentration at ground-floor level of buildings in the grid cells where no or few data (N<30) are available. Four interpolation techniques have been tested: inverse distance weighting (IDW), ordinary kriging (OK), collocated cokriging with uranium concentration as a secondary variable (CCK), and regression kriging with topsoil geochemistry and bedrock geology as secondary variables (RK). Cross-validation exercises have been carried out to assess the uncertainties associated with each method. Of the four methods tested, RK has proven to be the best one for predicting mean indoor radon concentrations; and by combining the RK predictions with the AM of the grids with 30 or more measurements, a Pan-European Indoor Radon Map has been produced. This map represents a first step towards a European radon exposure map and, in the future, a radon dose map."
+doi: "10.5194/nhess-19-2451-2019"
+publication: '*Natural Hazards and Earth System Sciences*'
+publishDate: "2019-11-05"
+slides: 
+summary: The first version of the Pan-European Indoor Radon Map is presented in this article.
+---

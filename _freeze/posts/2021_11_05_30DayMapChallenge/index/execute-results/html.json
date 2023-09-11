@@ -1,0 +1,16 @@
+{
+  "hash": "5cd22afb50f0a8fddddc0276dcee7a29",
+  "result": {
+    "markdown": "---\ntitle: \"Day 5 of the #30DayMapChallenge - Raster\"\nauthor: \n  - name: Javier Elío\n    url: https://github.com/javiereliomedina\n    orcid: 0000-0003-0624-2345\n    affiliation: Western Norway University of Applied Sciences\n    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio \ndate: 11-05-2019\ncategories: [R, Data visualization, 30DayChallenge]\nimage: featured.jpg\ndraft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!\n---\n\n\n\n\nI plotted airborne radiometric data from the Tellus survey ([**Geological Survey, Ireland**](https://www.gsi.ie/en-ie/programmes-and-projects/tellus/research/Pages/Radon.aspx)).\n\nLoad packages:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n  library(terra)\n  library(tidyverse)\n```\n:::\n\n\n1.  Download the radiomatric data ([*Tellus 2019: A5 block (Limerick)*](https://www.gsi.ie/en-ie/data-and-maps/Pages/Geophysics.aspx#Tellus2019Limerick):\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# dir.create(\"Rdata\")\n# Radiometric_URL <- \"https://gsi.geodata.gov.ie/downloads/Geophysics/Data/GSI_Tellus_A5_RAD_GRIDS_2019.zip\"\n# download.file(Radiometric_URL, destfile = \"Rdata/Radiometrics1.zip\")\n# unzip(zipfile = \"Rdata/Radiometrics.zip\", exdir   = \"Rdata/Radiometrics\")\n```\n:::\n\n\n2.  Read data with `terra`.\n\n\n::: {.cell}\n\n```{.r .cell-code}\neU_path <- \"Rdata/Radiometrics/A5_RAD_GRIDS_2019/TIF/A5_RAD_EQUIVALENT_URANIUM.tif\"\neU <- rast(eU_path)\n\n# # Remove data\n# unlink(\"Rdata\", recursive = TRUE)\n```\n:::\n\n\n3.  Plot the results\n\n\n::: {.cell}\n\n```{.r .cell-code}\n plot(eU)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/plot-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

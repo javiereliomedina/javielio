@@ -6,12 +6,11 @@ author:
     orcid: 0000-0003-0624-2345
     affiliation: Western Norway University of Applied Sciences
     affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
-date: 11-11-2021
+date: 11-03-2019
 categories: [R, Data visualization, 30DayChallenge]
 image: featured.jpg
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
-
 
 ```{r setup, include = FALSE}
   
@@ -20,19 +19,19 @@ draft: false # setting this to `true` will prevent your post from appearing on y
                         message = FALSE)
 ```
 
-I plotted a wold map (scale 1:60 Million) with color varying by country. 
+I plotted a wold map (scale 1:60 Million) with color varying by country.
 
-1) Download the data from [Eurostat](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data), where there are geographic data of: 
+1)  Download the data from [Eurostat](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data), where there are geographic data of:
 
-    + Administrative units – statistical units 
-    
-    + Population distribution – demography
-    
-    + Transport networks
-    
-    + Land cover
-    
-    + Elevation – DEM
+    -   Administrative units -- statistical units
+
+    -   Population distribution -- demography
+
+    -   Transport networks
+
+    -   Land cover
+
+    -   Elevation -- DEM
 
 Packages we are going to use:
 
@@ -56,7 +55,7 @@ Packages we are going to use:
 
 ```
 
-2) Plot the results with *fill = CNTR_ID*.
+2)  Plot the results with *fill = CNTR_ID*.
 
 ```{r plot}
 
@@ -68,4 +67,3 @@ Packages we are going to use:
     guides(fill = FALSE)
 
 ```
-
