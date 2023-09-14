@@ -1,12 +1,12 @@
 [
   {
-    "listing": "/post/post.html",
-    "items": []
-  },
-  {
-    "listing": "/post.html",
+    "listing": "/publications.html",
     "items": [
-      "/posts/2021_11_03_30DayMapChallenge/index.html"
+      "/publications/2020_Elio_et_al_JERA/index.html",
+      "/publications/2019_Elio_et_al_NHESS/index.html",
+      "/publications/2019_Elio_et_al_EES/index.html",
+      "/publications/2018_Elio_et_al_EI/index.html",
+      "/publications/2017_Elio_et_al_SOTEN/index.html"
     ]
   },
   {
@@ -15,16 +15,6 @@
       "/posts/2021_11_05_30DayMapChallenge/index.html",
       "/posts/2021_11_04_30DayMapChallenge/index.html",
       "/posts/2021_11_03_30DayMapChallenge/index.html"
-    ]
-  },
-  {
-    "listing": "/publications.html",
-    "items": [
-      "/publications/2020_Elio_et_al_JERA/index.html",
-      "/publications/2019_Elio_et_al_NHESS/index.html",
-      "/publications/2019_Elio_et_al_EES/index.html",
-      "/publications/2018_Elio_et_al_EI/index.html",
-      "/publications/2017_Elio_et_al_SOTEN/index.html"
     ]
   }
 ]

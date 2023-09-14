@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Application of airborne radiometric surveys for large-scale geogenic radon potential classification\n\n\n\nRadon\n\n\nGamma-ray spectrometry\n\n\nUranium\n\n\nSoil-gas\n\n\n\nBackground: Indoor radon represents an important health issue to the general population. Therefore, accurate radon risk maps help public authorities to prioritise areas…\n\n\n\nJavier Elío\n\n\nSep 19, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe first version of the Pan-European Indoor Radon Map\n\n\n\nRadon\n\n\nGeostatistics\n\n\nKriging\n\n\n\nA hypothetical Pan-European Indoor Radon Map has been developed using summary statistics estimated from 1.2 million indoor radon samples. In this study we have used the…\n\n\n\nJavier Elío\n\n\nNov 1, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRapid radon potential classification using soil-gas radon measurements in the Cooley Peninsula, County Louth, Ireland\n\n\n\nRadon\n\n\nsoil-gas\n\n\n\nA rapid method for local-scale radon risk assessment using in situ radon soil-gas measurements and a national-scale soil permeability data set have been evaluated. We test…\n\n\n\nJavier Elío\n\n\nJun 10, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEstimation of residential radon exposure and definition of Radon Priority Areas based on expected lung cancer incidence\n\n\n\nRadon\n\n\nGeostatistics\n\n\nKriging\n\n\n\nRadon is a naturally occurring gas, classified as a Class 1 human carcinogen, being the second most significant cause of lung cancer after tobacco smoking. A robust spatial…\n\n\n\nJavier Elío\n\n\nFeb 24, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEstimation of residential radon exposure and definition of Radon Priority Areas based on expected lung cancer incidence\n\n\n\nRadon\n\n\nMachine learning\n\n\nLogistic regression\n\n\n\nA new high spatial resolution radon risk map of Ireland has been developed, based on a combination of indoor radon measurements (n = 31,910) and relevant geological…\n\n\n\nJavier Elío\n\n\nDec 1, 2017\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "Day 5 of the #30DayMapChallenge - Raster\n\n\n\nR\n\n\nData visualization\n\n\n30DayChallenge\n\n\n\n\n\n\n\nJavier Elío\n\n\nNov 5, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 4 of the #30DayMapChallenge - Hexagons\n\n\n\nR\n\n\nData visualization\n\n\n30DayChallenge\n\n\n\n\n\n\n\nJavier Elío\n\n\nNov 4, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 3 of the #30DayMapChallenge - Polygons\n\n\n\nR\n\n\nData visualization\n\n\n30DayChallenge\n\n\n\n\n\n\n\nJavier Elío\n\n\nNov 3, 2019\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2021_11_04_30DayMapChallenge/index.html",
+    "href": "posts/2021_11_04_30DayMapChallenge/index.html",
+    "title": "Day 4 of the #30DayMapChallenge - Hexagons",
+    "section": "",
+    "text": "I made a hexagon tessellation of a region (e.g.Iberian Peninsula):\n\nDownload country data from Eurostat.\n\n\n  World_URL &lt;- \"https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/countries/download/ref-countries-2016-60m.shp.zip\"\n  dir.create(\"Rdata\")\n  download.file(World_URL, destfile = \"Rdata/World.zip\")\n  unzip(zipfile = \"Rdata/World.zip\", exdir   = \"Rdata/World\")\n  unzip(zipfile = \"Rdata/World/CNTR_RG_60M_2016_4326.shp.zip\",\n        exdir   = \"Rdata/World_SHP\")\n  World &lt;- read_sf(\"Rdata/World_SHP/CNTR_RG_60M_2016_4326.shp\")\n  unlink(\"Rdata\", recursive = TRUE)\n\n\nFrom the world map select Spain and Portugal (SP)\n\n\n  SP &lt;- World %&gt;%\n    filter(NAME_ENGL == \"Spain\" | NAME_ENGL == \"Portugal\") %&gt;%\n    st_cast(\"POLYGON\") \n\n\nRemove islands (e.g. Canary Islands) and small territories. I calculated the area of each polygon and then I selected the polygons which have more than 4,000 km2. Finally I merged the resulting polygons for obtaining the Iberian Peninsula (IB).\n\n\n  IB &lt;- SP %&gt;%\n    mutate(Area = units::set_units(st_area(SP), km^2)) %&gt;%\n    filter(Area &gt; units::set_units(4000, km^2)) %&gt;%\n    st_union()\n\n\nMake hexagons\n\n\n  Grids &lt;- st_make_grid(IB, cellsize = .2, what = \"polygons\", square = FALSE) %&gt;%\n      st_sf()\n\n\nPlot the results\n\n\n  ggplot() +\n      geom_sf(data = Grids, col = \"red\") +\n      geom_sf(data = IB, alpha = 1, colour = \"black\", fill = NA, size = 0.5) +\n      labs(title = \"Hexagon tessellation of the Iberian Peninsula\")"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Javier Elío",
@@ -14,34 +35,6 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "post/post.html",
-    "href": "post/post.html",
-    "title": "My Blog",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "post/2021_11_03_30DayMapChallenge/index.html",
-    "href": "post/2021_11_03_30DayMapChallenge/index.html",
-    "title": "Day 3 of the #30DayMapChallenge - Polygons",
-    "section": "",
-    "text": "I plotted a wold map (scale 1:60 Million) with color varying by country.\n\nDownload the data from Eurostat, where there are geographic data of:\n\nAdministrative units – statistical units\nPopulation distribution – demography\nTransport networks\nLand cover\nElevation – DEM\n\n\nPackages we are going to use:\n\n  library(sf)\n  library(tidyverse)\n\n\n  World_URL &lt;- \"https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/countries/download/ref-countries-2016-60m.shp.zip\"\n  dir.create(\"Rdata\")\n  download.file(World_URL, destfile = \"Rdata/World.zip\")\n  unzip(zipfile = \"Rdata/World.zip\", exdir   = \"Rdata/World\")\n  unzip(zipfile = \"Rdata/World/CNTR_RG_60M_2016_4326.shp.zip\",\n        exdir   = \"Rdata/World_SHP\")\n  World &lt;- read_sf(\"Rdata/World_SHP/CNTR_RG_60M_2016_4326.shp\")\n  unlink(\"Rdata\", recursive = TRUE)\n\n\nPlot the results with fill = CNTR_ID.\n\n\n  ggplot() +\n    geom_sf(data = World, aes(fill = CNTR_ID)) +\n    labs(title = \"Administrative boundaries at country level of the world\",\n         subtitle = \"Scale 1:60 Million\",\n         caption = \"© EuroGeographics for the administrative boundaries\") +\n    guides(fill = FALSE)"
-  },
-  {
-    "objectID": "post.html",
-    "href": "post.html",
-    "title": "My Blog",
-    "section": "",
-    "text": "Day 3 of the #30DayMapChallenge - Polygons\n\n\n\nR\n\n\nData visualization\n\n\n30DayChallenge\n\n\n\n\n\n\n\nJavier Elío\n\n\nNov 11, 2021\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "My Blog",
-    "section": "",
-    "text": "Day 5 of the #30DayMapChallenge - Raster\n\n\n\nR\n\n\nData visualization\n\n\n30DayChallenge\n\n\n\n\n\n\n\nJavier Elío\n\n\nNov 5, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 4 of the #30DayMapChallenge - Hexagons\n\n\n\nR\n\n\nData visualization\n\n\n30DayChallenge\n\n\n\n\n\n\n\nJavier Elío\n\n\nNov 4, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 3 of the #30DayMapChallenge - Polygons\n\n\n\nR\n\n\nData visualization\n\n\n30DayChallenge\n\n\n\n\n\n\n\nJavier Elío\n\n\nNov 3, 2019\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/2021_11_03_30DayMapChallenge/index.html",
     "href": "posts/2021_11_03_30DayMapChallenge/index.html",
     "title": "Day 3 of the #30DayMapChallenge - Polygons",
@@ -49,25 +42,11 @@
     "text": "I plotted a wold map (scale 1:60 Million) with color varying by country.\n\nDownload the data from Eurostat, where there are geographic data of:\n\nAdministrative units – statistical units\nPopulation distribution – demography\nTransport networks\nLand cover\nElevation – DEM\n\n\nPackages we are going to use:\n\n  library(sf)\n  library(tidyverse)\n\n\n  World_URL &lt;- \"https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/countries/download/ref-countries-2016-60m.shp.zip\"\n  dir.create(\"Rdata\")\n  download.file(World_URL, destfile = \"Rdata/World.zip\")\n  unzip(zipfile = \"Rdata/World.zip\", exdir   = \"Rdata/World\")\n  unzip(zipfile = \"Rdata/World/CNTR_RG_60M_2016_4326.shp.zip\",\n        exdir   = \"Rdata/World_SHP\")\n  World &lt;- read_sf(\"Rdata/World_SHP/CNTR_RG_60M_2016_4326.shp\")\n  unlink(\"Rdata\", recursive = TRUE)\n\n\nPlot the results with fill = CNTR_ID.\n\n\n  ggplot() +\n    geom_sf(data = World, aes(fill = CNTR_ID)) +\n    labs(title = \"Administrative boundaries at country level of the world\",\n         subtitle = \"Scale 1:60 Million\",\n         caption = \"© EuroGeographics for the administrative boundaries\") +\n    guides(fill = FALSE)"
   },
   {
-    "objectID": "posts/2021_11_04_30DayMapChallenge/index.html",
-    "href": "posts/2021_11_04_30DayMapChallenge/index.html",
-    "title": "Day 4 of the #30DayMapChallenge - Hexagons",
-    "section": "",
-    "text": "I made a hexagon tessellation of a region (e.g.Iberian Peninsula):\n\nDownload country data from Eurostat.\n\n\n  World_URL &lt;- \"https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/countries/download/ref-countries-2016-60m.shp.zip\"\n  dir.create(\"Rdata\")\n  download.file(World_URL, destfile = \"Rdata/World.zip\")\n  unzip(zipfile = \"Rdata/World.zip\", exdir   = \"Rdata/World\")\n  unzip(zipfile = \"Rdata/World/CNTR_RG_60M_2016_4326.shp.zip\",\n        exdir   = \"Rdata/World_SHP\")\n  World &lt;- read_sf(\"Rdata/World_SHP/CNTR_RG_60M_2016_4326.shp\")\n  unlink(\"Rdata\", recursive = TRUE)\n\n\nFrom the world map select Spain and Portugal (SP)\n\n\n  SP &lt;- World %&gt;%\n    filter(NAME_ENGL == \"Spain\" | NAME_ENGL == \"Portugal\") %&gt;%\n    st_cast(\"POLYGON\") \n\n\nRemove islands (e.g. Canary Islands) and small territories. I calculated the area of each polygon and then I selected the polygons which have more than 4,000 km2. Finally I merged the resulting polygons for obtaining the Iberian Peninsula (IB).\n\n\n  IB &lt;- SP %&gt;%\n    mutate(Area = units::set_units(st_area(SP), km^2)) %&gt;%\n    filter(Area &gt; units::set_units(4000, km^2)) %&gt;%\n    st_union()\n\n\nMake hexagons\n\n\n  Grids &lt;- st_make_grid(IB, cellsize = .2, what = \"polygons\", square = FALSE) %&gt;%\n      st_sf()\n\n\nPlot the results\n\n\n  ggplot() +\n      geom_sf(data = Grids, col = \"red\") +\n      geom_sf(data = IB, alpha = 1, colour = \"black\", fill = NA, size = 0.5) +\n      labs(title = \"Hexagon tessellation of the Iberian Peninsula\")"
-  },
-  {
     "objectID": "posts/2021_11_05_30DayMapChallenge/index.html",
     "href": "posts/2021_11_05_30DayMapChallenge/index.html",
     "title": "Day 5 of the #30DayMapChallenge - Raster",
     "section": "",
     "text": "I plotted airborne radiometric data from the Tellus survey (Geological Survey, Ireland).\nLoad packages:\n\n  library(terra)\n  library(tidyverse)\n\n\nDownload the radiomatric data (Tellus 2019: A5 block (Limerick):\n\n\n# dir.create(\"Rdata\")\n# Radiometric_URL &lt;- \"https://gsi.geodata.gov.ie/downloads/Geophysics/Data/GSI_Tellus_A5_RAD_GRIDS_2019.zip\"\n# download.file(Radiometric_URL, destfile = \"Rdata/Radiometrics1.zip\")\n# unzip(zipfile = \"Rdata/Radiometrics.zip\", exdir   = \"Rdata/Radiometrics\")\n\n\nRead data with terra.\n\n\neU_path &lt;- \"Rdata/Radiometrics/A5_RAD_GRIDS_2019/TIF/A5_RAD_EQUIVALENT_URANIUM.tif\"\neU &lt;- rast(eU_path)\n\n# # Remove data\n# unlink(\"Rdata\", recursive = TRUE)\n\n\nPlot the results\n\n\n plot(eU)"
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Application of airborne radiometric surveys for large-scale geogenic radon potential classification\n\n\n\nRadon\n\n\nGamma-ray spectrometry\n\n\nUranium\n\n\nSoil-gas\n\n\n\nBackground: Indoor radon represents an important health issue to the general population. Therefore, accurate radon risk maps help public authorities to prioritise areas…\n\n\n\nJavier Elío\n\n\nSep 19, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe first version of the Pan-European Indoor Radon Map\n\n\n\nRadon\n\n\nGeostatistics\n\n\nKriging\n\n\n\nA hypothetical Pan-European Indoor Radon Map has been developed using summary statistics estimated from 1.2 million indoor radon samples. In this study we have used the…\n\n\n\nJavier Elío\n\n\nNov 1, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRapid radon potential classification using soil-gas radon measurements in the Cooley Peninsula, County Louth, Ireland\n\n\n\nRadon\n\n\nsoil-gas\n\n\n\nA rapid method for local-scale radon risk assessment using in situ radon soil-gas measurements and a national-scale soil permeability data set have been evaluated. We test…\n\n\n\nJavier Elío\n\n\nJun 10, 2019\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEstimation of residential radon exposure and definition of Radon Priority Areas based on expected lung cancer incidence\n\n\n\nRadon\n\n\nGeostatistics\n\n\nKriging\n\n\n\nRadon is a naturally occurring gas, classified as a Class 1 human carcinogen, being the second most significant cause of lung cancer after tobacco smoking. A robust spatial…\n\n\n\nJavier Elío\n\n\nFeb 24, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEstimation of residential radon exposure and definition of Radon Priority Areas based on expected lung cancer incidence\n\n\n\nRadon\n\n\nMachine learning\n\n\nLogistic regression\n\n\n\nA new high spatial resolution radon risk map of Ireland has been developed, based on a combination of indoor radon measurements (n = 31,910) and relevant geological…\n\n\n\nJavier Elío\n\n\nDec 1, 2017\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "publications/2020_Elio_et_al_JERA/index.html",
