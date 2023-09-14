@@ -20,9 +20,7 @@ about:
 
 # Hi!
 
-I am **Javi**, I am Associate Professor at the Department of Mechanical and Marine Engineering, Høgskulen på Vestlandet ([link](https://www.hvl.no/en/employee/?user=Javier.Elio)). I teach *Statics and Mechanical of Materials*, and *Material and Manufacturing,* and I really like it!! I hope my students think the same (please if you read this, leave a comment!!)
-
-I an engineer with 15+ years of research and teaching experience, with a solid background in statistics, spatial data analysis, and modelling. My main research area is environmental science, with a particular interest in natural hazards and climate change. Nowadays, I am at Høgskulen på Vestlandet (Norway), and member of the research group [Applied Marine Microbiology](https://www.hvl.no/en/research/group/applied-marine-microbiology/) at the same university.
+I am **Javi**, I am Associate Professor at the Department of Mechanical and Marine Engineering, Høgskulen på Vestlandet ([link](https://www.hvl.no/en/employee/?user=Javier.Elio)). I teach *Statics and Mechanical of Materials*, and *Material and Manufacturing,* and I really like it!! I hope my students think the same (please if you read this, leave a comment!!). My main research area is environmental science, with a particular interest in natural hazards and climate change.
 
 # Interests
 
