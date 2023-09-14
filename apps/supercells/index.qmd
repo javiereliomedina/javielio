@@ -1,5 +1,5 @@
 ---
-title: "shiny supercells"
+title: "Shiny supercells"
 author: 
   - name: Javier Elío
     url: https://github.com/javiereliomedina
