@@ -20,7 +20,8 @@
   {
     "listing": "/apps.html",
     "items": [
-      "/apps/cv_builder/index.html"
+      "/apps/cv_builder/index.html",
+      "/apps/supercells/index.html"
     ]
   }
 ]

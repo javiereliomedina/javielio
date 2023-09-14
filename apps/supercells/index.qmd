@@ -1,0 +1,18 @@
+---
+title: "shiny supercells"
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+categories: [supercells, R-Shiny]
+image: featured.png
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+Implementation of [supercells](https://nowosad.github.io/supercells/) r-package on Shiny.
+
+Link to the app: <https://javierelio.shinyapps.io/supercells/>
+
+Link to GitHub repo: [link](https://github.com/javiereliomedina/shiny_supercells.git)

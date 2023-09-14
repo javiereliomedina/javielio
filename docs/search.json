@@ -28,6 +28,13 @@
     "text": "Hi!\nI am Javi, I am Associate Professor at the Department of Mechanical and Marine Engineering, Høgskulen på Vestlandet (link). I teach Statics and Mechanical of Materials, and Material and Manufacturing, and I really like it!! I hope my students think the same (please if you read this, leave a comment!!). My main research area is environmental science, with a particular interest in natural hazards and climate change.\n\n\nInterests\n\nEnvironmental risk assessment.\nStatistics, spatial data analysis, and geostatistics.\nGeographic information systems (GIS).\nR language.\n\n\n\nExperience\nAssociate Professor (2022 - present) Western Norway University of Applied Sciences\nPostdoc in Geioinformatics on Migration Modelling (2020 - 2022)\nAalborg Universitet, DK\nAssistant Professor (2019) Western Norway University of Applied Sciences\nPostdoctoral Research Fellow (2016 - 2018) Trinity College Dublin\nResearch Assistant” (2014) Technical Universityof Madrid\nPhD Candidate (2009 - 2013) Ciudad de la Energía Foundation\nResearch Assistant (2007 - 2009) Technical Universityof Madrid\nTunnel Engineer (2005 - 2007) Obrascón Huarte Laín S.A.\n\n\nEducation\n\nPhD in Environmental Science, Technical University of Madrid (2013)\nMSc in Environmental Research, Modelling and Risk Assessment, Technical University of Madrid (2009)\nMEng in Mining Engineering, Technical University of Madrid (2005)"
   },
   {
+    "objectID": "apps/supercells/index.html",
+    "href": "apps/supercells/index.html",
+    "title": "shiny supercells",
+    "section": "",
+    "text": "Implementation of supercells r-package on Shiny.\nLink to the app: https://javierelio.shinyapps.io/supercells/\nLink to GitHub repo: link"
+  },
+  {
     "objectID": "apps/cv_builder/index.html",
     "href": "apps/cv_builder/index.html",
     "title": "Free CV builder app",
@@ -39,7 +46,7 @@
     "href": "apps.html",
     "title": "Apps",
     "section": "",
-    "text": "Free CV builder app\n\n\n\nCV\n\n\nCover letter\n\n\nShiny\n\n\n\n\n\n\n\nJavier Elío\n\n\nJan 1, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Free CV builder app\n\n\n\nCV\n\n\nCover letter\n\n\nR-Shiny\n\n\n\n\n\n\n\nJavier Elío\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nshiny supercells\n\n\n\nsupercells\n\n\nR-Shiny\n\n\n\n\n\n\n\nJavier Elío\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2021_11_03_30DayMapChallenge/index.html",
