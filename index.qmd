@@ -13,7 +13,7 @@ about:
     - text: GitHub
       href: https://github.com/javiereliomedina
     - text: Email
-      href: javiereliomedina@gmail.com
+      href: mailto:javiereliomedina@gmail.com 
     - text: Google-scholar
       href: https://scholar.google.com/citations?user=NF5SYm8AAAAJ&hl=no
 ---
@@ -26,44 +26,37 @@ I an engineer with 15+ years of research and teaching experience, with a solid b
 
 # Interests
 
-- Environmental risk assessment.
+-   Environmental risk assessment.
 
-- Statistics, spatial data analysis, and geostatistics. 
+-   Statistics, spatial data analysis, and geostatistics.
 
-- Geographic information systems (GIS).
+-   Geographic information systems (GIS).
 
-- R language.
+-   R language.
 
-# Experience 
+# Experience
 
-**Assistant Professor** (2022 - present)
-Western Norway University of Applied Sciences 
-  
-**Postdoc in Geioinformatics on Migration Modelling**  (2020 - 2022)  
+**Assistant Professor** (2022 - present) Western Norway University of Applied Sciences
+
+**Postdoc in Geioinformatics on Migration Modelling** (2020 - 2022)\
 Aalborg Universitet, DK
 
-**Assistant Professor** (2019)
-Western Norway University of Applied Sciences 
+**Assistant Professor** (2019) Western Norway University of Applied Sciences
 
-**Postdoctoral Research Fellow** (2016 - 2018)
-Trinity College Dublin 
-  
-**Research Assistant"** (2014)
-Technical Universityof Madrid
+**Postdoctoral Research Fellow** (2016 - 2018) Trinity College Dublin
 
-**PhD Candidate** (2009 - 2013)
-Ciudad de la Energía Foundation
+**Research Assistant"** (2014) Technical Universityof Madrid
 
-**Research Assistant** (2007 - 2009)
-Technical Universityof Madrid
+**PhD Candidate** (2009 - 2013) Ciudad de la Energía Foundation
 
-**Tunnel Engineer** (2005 - 2007)
-Obrascón Huarte Laín S.A.
-  
+**Research Assistant** (2007 - 2009) Technical Universityof Madrid
+
+**Tunnel Engineer** (2005 - 2007) Obrascón Huarte Laín S.A.
+
 # Education
 
-- **PhD in Environmental Science**, Technical University of Madrid (2013)
+-   **PhD in Environmental Science**, Technical University of Madrid (2013)
 
-- **MSc in Environmental Research, Modelling and Risk Assessment**, Technical University of Madrid (2009)
+-   **MSc in Environmental Research, Modelling and Risk Assessment**, Technical University of Madrid (2009)
 
-- **MEng in Mining Engineering**, Technical University of Madrid (2005)
+-   **MEng in Mining Engineering**, Technical University of Madrid (2005)
