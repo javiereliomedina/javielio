@@ -16,5 +16,11 @@
       "/posts/2021_11_04_30DayMapChallenge/index.html",
       "/posts/2021_11_03_30DayMapChallenge/index.html"
     ]
+  },
+  {
+    "listing": "/apps.html",
+    "items": [
+      "/apps/cv_builder/index.html"
+    ]
   }
 ]

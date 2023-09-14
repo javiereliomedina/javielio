@@ -28,6 +28,20 @@
     "text": "Hi!\nI am Javi, I am Assistant Professor at the Department of Mechanical and Marine Engineering, Høgskulen på Vestlandet (link). I teach Statics and Mechanical of Materials, and Material and Manufacturing, and I really like it!! I hope my students think the same (please if you read this, leave a comment!!)\nI an engineer with 15+ years of research and teaching experience, with a solid background in statistics, spatial data analysis, and modelling. My main research area is environmental science, with a particular interest in natural hazards and climate change. Nowadays, I am at Høgskulen på Vestlandet (Norway), and member of the research group Applied Marine Microbiology at the same university.\n\n\nInterests\n\nEnvironmental risk assessment.\nStatistics, spatial data analysis, and geostatistics.\nGeographic information systems (GIS).\nR language.\n\n\n\nExperience\nAssistant Professor (2022 - present) Western Norway University of Applied Sciences\nPostdoc in Geioinformatics on Migration Modelling (2020 - 2022)\nAalborg Universitet, DK\nAssistant Professor (2019) Western Norway University of Applied Sciences\nPostdoctoral Research Fellow (2016 - 2018) Trinity College Dublin\nResearch Assistant” (2014) Technical Universityof Madrid\nPhD Candidate (2009 - 2013) Ciudad de la Energía Foundation\nResearch Assistant (2007 - 2009) Technical Universityof Madrid\nTunnel Engineer (2005 - 2007) Obrascón Huarte Laín S.A.\n\n\nEducation\n\nPhD in Environmental Science, Technical University of Madrid (2013)\nMSc in Environmental Research, Modelling and Risk Assessment, Technical University of Madrid (2009)\nMEng in Mining Engineering, Technical University of Madrid (2005)"
   },
   {
+    "objectID": "apps/cv_builder/index.html",
+    "href": "apps/cv_builder/index.html",
+    "title": "Free CV builder app",
+    "section": "",
+    "text": "I have created a Shiny app (link) for building academic CVs from an excel file. The idea is to save all our profesional information in only one file, which we can use later to get various CVs depending on our needs (e.g. short vs. full academic CV). It uses CV templates from pagedown and vitae, and it is inspired on the datadrivencv package and a demo shiny app developed by Romain Lesur. If you use it, please let me know what you think on my twitter or linkedin pages.\nThere are three panels with diferent templates depending on the document you would like to get\n\nCover Letter: generates a cover letter with two subsections. One to speak about us and why we are the best candidate, and another to explain our vision of the position and what we plan to do in it.\n2-pages CV: generates a 2 pages document. I think it may be more interesting if you apply for industrial jobs. Please, let me know what do you think!!\nFull CV: generates an extended academic CV with a list of publications.\n\nBoth CV templates, however, use the same excel file for importing the data, which I think is very handy!! You may find the excel template in Download Excel template.\nYou may find the GitHub repo here: link"
+  },
+  {
+    "objectID": "apps.html",
+    "href": "apps.html",
+    "title": "Apps",
+    "section": "",
+    "text": "Free CV builder app\n\n\n\nCV\n\n\nCover letter\n\n\nShiny\n\n\n\n\n\n\n\nJavier Elío\n\n\nNov 5, 2019\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/2021_11_03_30DayMapChallenge/index.html",
     "href": "posts/2021_11_03_30DayMapChallenge/index.html",
     "title": "Day 3 of the #30DayMapChallenge - Polygons",

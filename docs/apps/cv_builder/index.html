@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Javier Elío">
-<meta name="dcterms.date" content="2018-02-24">
+<meta name="dcterms.date" content="2019-11-05">
 
-<title>javielio - Estimation of residential radon exposure and definition of Radon Priority Areas based on expected lung cancer incidence</title>
+<title>javielio - Free CV builder app</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,74 +110,67 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Estimation of residential radon exposure and definition of Radon Priority Areas based on expected lung cancer incidence</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Radon</div>
-                <div class="quarto-category">Geostatistics</div>
-                <div class="quarto-category">Kriging</div>
-              </div>
-                  </div>
-  </div>
-    
-  <div class="quarto-title-meta-author">
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-heading">Affiliation</div>
-    
-      <div class="quarto-title-meta-contents">
-      <p class="author"><a href="https://github.com/javiereliomedina">Javier Elío</a> <a href="https://orcid.org/0000-0003-0624-2345" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-    </div>
-      <div class="quarto-title-meta-contents">
-          <p class="affiliation">
-              <a href="https://www.hvl.no/en/employee/?user=Javier.Elio">
-              Western Norway University of Applied Sciences
-              </a>
-            </p>
-        </div>
-      </div>
-
-  <div class="quarto-title-meta">
-
-        
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">February 24, 2018</p>
-      </div>
-    </div>
-    
-      
-      <div>
-      <div class="quarto-title-meta-heading">Doi</div>
-      <div class="quarto-title-meta-contents">
-        <p class="doi">
-          <a href="https://doi.org/10.1016/j.envint.2018.02.025">10.1016/j.envint.2018.02.025</a>
-        </p>
-      </div>
-    </div>
-    </div>
-    
-  <div>
-    <div class="abstract">
-      <div class="abstract-title">Abstract</div>
-      Radon is a naturally occurring gas, classified as a Class 1 human carcinogen, being the second most significant cause of lung cancer after tobacco smoking. A robust spatial definition of radon distribution in the built environment is therefore essential for understanding the relationship between radon exposure and its adverse health effects on the general population. Using Ireland as a case study, we present a methodology to estimate an average indoor radon concentration and calculate the expected radon-related lung cancer incidence. We use this approach to define Radon Priority Areas at the administrative level of Electoral Divisions (EDs). Geostatistical methods were applied to a data set of almost 32,000 indoor radon measurements, sampled in Ireland between 1992 and 2013. Average indoor radon concentrations by ED range from 21 to 338 Bq m−3, corresponding to an effective dose ranging from 0.8 to 13.3 mSv y−1 respectively. Radon-related lung cancer incidence by ED was calculated using a dose-effect model giving between 15 and 239 cases per million people per year, depending on the ED. Based on these calculations, together with the population density, we estimate that of the approximately 2,300 lung cancer cases currently diagnosed in Ireland annually, about 280 may be directly linked to radon exposure. This figure does not account for the synergistic effect of radon exposure with other factors (e.g.&nbsp;tobacco smoking), so likely represents a minimum estimate. Our approach spatially defines areas with the expected highest incidence of radon-related lung cancer, even though indoor radon concentrations for these areas may be moderate or low. We therefore recommend that both indoor radon concentration and population density by small area are considered when establishing national radon action plans.
-    </div>
-  </div>
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Free CV builder app</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">CV</div>
+    <div class="quarto-category">Cover letter</div>
+    <div class="quarto-category">Shiny</div>
+  </div>
+  </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://github.com/javiereliomedina">Javier Elío</a> <a href="https://orcid.org/0000-0003-0624-2345" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.hvl.no/en/employee/?user=Javier.Elio">
+            Western Norway University of Applied Sciences
+            </a>
+          </p>
+      </div>
+    </div>
 
+<div class="quarto-title-meta">
 
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 5, 2019</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>I have created a Shiny app (<a href="https://javierelio.shinyapps.io/cv_app/">link</a>) for building academic CVs from an excel file. The idea is to save all our profesional information in only one file, which we can use later to get various CVs depending on our needs (e.g.&nbsp;short vs.&nbsp;full academic CV). It uses CV templates from <a href="https://github.com/rstudio/pagedown.git">pagedown</a> and <a href="https://github.com/mitchelloharawild/vitae.git">vitae,</a> and it is inspired on the <a href="https://github.com/nstrayer/datadrivencv">datadrivencv</a> package and a demo shiny app developed by <a href="https://github.com/RLesur/chrome_print_shiny.git">Romain Lesur.</a> If you use it, please let me know what you think on my <a href="https://twitter.com/Elio_Javi">twitter</a> or <a href="https://www.linkedin.com/in/javiereliomedina/">linkedin</a> pages.</p>
+<p>There are three panels with diferent templates depending on the document you would like to get</p>
+<ul>
+<li><p><strong>Cover Letter:</strong> generates a cover letter with two subsections. One to speak about us and why we are the best candidate, and another to explain our vision of the position and what we plan to do in it.</p></li>
+<li><p><strong>2-pages CV:</strong> generates a 2 pages document. I think it may be more interesting if you apply for industrial jobs. Please, let me know what do you think!!</p></li>
+<li><p><strong>Full CV:</strong> generates an extended academic CV with a list of publications.</p></li>
+</ul>
+<p>Both CV templates, however, use the same excel file for importing the data, which I think is very handy!! You may find the excel template in <em>Download Excel template.</em></p>
+<p>You may find the GitHub repo here: <a href="https://github.com/javiereliomedina/cv_app.git">link</a></p>
 
 
 

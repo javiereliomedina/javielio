@@ -1,0 +1,27 @@
+---
+title: "Free CV builder app"
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 11-05-2019
+categories: [CV, Cover letter, Shiny]
+image: featured.png
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+I have created a Shiny app ([link](https://javierelio.shinyapps.io/cv_app/)) for building academic CVs from an excel file. The idea is to save all our profesional information in only one file, which we can use later to get various CVs depending on our needs (e.g. short vs. full academic CV). It uses CV templates from [pagedown](https://github.com/rstudio/pagedown.git) and [vitae,](https://github.com/mitchelloharawild/vitae.git) and it is inspired on the [datadrivencv](https://github.com/nstrayer/datadrivencv) package and a demo shiny app developed by [Romain Lesur.](https://github.com/RLesur/chrome_print_shiny.git) If you use it, please let me know what you think on my [twitter](https://twitter.com/Elio_Javi) or [linkedin](https://www.linkedin.com/in/javiereliomedina/) pages.
+
+There are three panels with diferent templates depending on the document you would like to get
+
+-   **Cover Letter:** generates a cover letter with two subsections. One to speak about us and why we are the best candidate, and another to explain our vision of the position and what we plan to do in it.
+
+-   **2-pages CV:** generates a 2 pages document. I think it may be more interesting if you apply for industrial jobs. Please, let me know what do you think!!
+
+-   **Full CV:** generates an extended academic CV with a list of publications.
+
+Both CV templates, however, use the same excel file for importing the data, which I think is very handy!! You may find the excel template in *Download Excel template.*
+
+You may find the GitHub repo here: [link](https://github.com/javiereliomedina/cv_app.git)
