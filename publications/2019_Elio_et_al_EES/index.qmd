@@ -1,0 +1,20 @@
+---
+title: "Rapid radon potential classification using soil-gas radon measurements in the Cooley Peninsula, County Louth, Ireland"
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 06-10-2019
+categories: [Radon, soil-gas]
+image: featured.jpg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+abstract: "A rapid method for local-scale radon risk assessment using in situ radon soil-gas measurements and a national-scale soil permeability data set have been evaluated. We test and validate our approach in a case study on the Cooley Peninsula, County Louth, Ireland. In total, 60 radon soil-gas measurements from 48 points were carried out in an area of approximately 160 km2 over a 5 days period. Results of radon potential classification are compared with the legislative indoor radon map of Ireland, with more than 400 indoor radon measurements in the study area. Soil-gas radon concentrations on the Cooley Peninsula ranged from very low values (<10 kBq m−3) to extremely high (up to 112 kBq m−3), whereas indoor radon concentrations ranged from 3 to 863 Bq m−3. The Cooley Peninsula is therefore mostly classified as a moderate–high and high radon potential area. The percentage of indoor radon variance explained by soil-gas radon concentration, soil permeability and geology is approximately 30% (12, 9.3, and 8.6%; respectively). Our findings show that radon potential classification can detect radon priority areas with a reasonable degree of accuracy, even with a relatively low number of point measurements in relation to the size of the area studied. We demonstrate that active radon measurements and geostatistical modelling can significantly reduce the time and cost required to evaluate an area in relation to expected indoor radon concentrations. This approach is viable to produce a radon potential map in rural areas, or where land-use has been re-designated for new housing, where few or no indoor radon measurements are available."
+doi: "10.1007/s12665-019-8339-4"
+publication: '*Environmental Earth Sciences*'
+publishDate: "2019-06-10"
+slides: 
+summary: A rapid method for local-scale radon risk assessment using in situ radon soil-gas measurements and a national-scale soil permeability data set have been evaluated.
+---

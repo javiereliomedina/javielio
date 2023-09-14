@@ -1,0 +1,20 @@
+---
+title: "Estimation of residential radon exposure and definition of Radon Priority Areas based on expected lung cancer incidence"
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 2018-02-24
+categories: [Radon, Geostatistics, Kriging]
+image: featured.jpg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+
+abstract: "Radon is a naturally occurring gas, classified as a Class 1 human carcinogen, being the second most significant cause of lung cancer after tobacco smoking. A robust spatial definition of radon distribution in the built environment is therefore essential for understanding the relationship between radon exposure and its adverse health effects on the general population. Using Ireland as a case study, we present a methodology to estimate an average indoor radon concentration and calculate the expected radon-related lung cancer incidence. We use this approach to define Radon Priority Areas at the administrative level of Electoral Divisions (EDs). Geostatistical methods were applied to a data set of almost 32,000 indoor radon measurements, sampled in Ireland between 1992 and 2013. Average indoor radon concentrations by ED range from 21 to 338 Bq m−3, corresponding to an effective dose ranging from 0.8 to 13.3 mSv y−1 respectively. Radon-related lung cancer incidence by ED was calculated using a dose-effect model giving between 15 and 239 cases per million people per year, depending on the ED. Based on these calculations, together with the population density, we estimate that of the approximately 2,300 lung cancer cases currently diagnosed in Ireland annually, about 280 may be directly linked to radon exposure. This figure does not account for the synergistic effect of radon exposure with other factors (e.g. tobacco smoking), so likely represents a minimum estimate. Our approach spatially defines areas with the expected highest incidence of radon-related lung cancer, even though indoor radon concentrations for these areas may be moderate or low. We therefore recommend that both indoor radon concentration and population density by small area are considered when establishing national radon action plans."
+doi: "10.1016/j.envint.2018.02.025"
+publication: '*Environmental International*'
+publishDate: "2018-02-24"
+slides: 
+summary: A map indicating where the highest radon-related lung cancer incidence is expected in Ireland.
+---
