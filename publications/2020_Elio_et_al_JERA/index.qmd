@@ -30,7 +30,6 @@ url_project: "https://www.gsi.ie/en-ie/publications/Pages/GSI-2017-Short-Call-Cr
 url_slides: ""
 url_source: ""
 url_video: ""
-Links:
 links:
     - text: Code
       href: https://github.com/javiereliomedina/Radiometrics_IE.git

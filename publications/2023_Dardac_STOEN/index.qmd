@@ -1,0 +1,25 @@
+---
+title: "Machine learning in environmental radon science"
+
+abstract: "Temporal dynamic as well as spatial variability of environmental radon are controlled by factors such as meteorology, lithology, soil properties, hydrogeology, tectonics, and seismicity. In addition, indoor radon concentration is subject to anthropogenic factors, such as physical characteristics of a building and usage pattern.New tools for spatial and time series analysis and prediction belong to what is commonly called machine learning (ML). The ML algorithms presented here build models based on sample and predictor data to extract information and to make predictions. We give a short overview on ML methods and discuss their respective merits, their application, and ways of validating results. We show examples of 1) geogenic radon mapping in Germany involving a number of predictors, and of 2) time series analysis of a long-term experiment being carried out in Chiba, Japan, involving indoor radon concentrations and meteorological predictors.Finally, we identified the main weakness of the techniques, and we suggest actions to overcome their limitations."
+
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 01-14-2023
+categories: [Radon, Machine learning]
+image: featured.jpg
+doi: "10.1016/j.apradiso.2023.110684"
+publication: "*Applied Radiation and Isotopes*"
+url_code: ""
+url_dataset: ""
+url_pdf: ""
+url_poster: ""
+url_slides: ""
+url_source: ""
+url_video: ""
+draft: false
+---

@@ -1,0 +1,25 @@
+---
+title: "Hubs and clusters approach to unlock the development of carbon capture and storage. Case study in Spain"
+
+abstract: "Many countries have assigned an indispensable role for carbon capture and storage (CCS) in their national climate change mitigation pathways. However, CCS deployment has stalled in most countries with only limited commercial projects realised mainly in hydrocarbon-rich countries for enhanced oil recovery. If the Paris Agreement is to be met, then this progress must be replicated widely, including hydrocarbon-limited countries. In this study, we present a novel source-to-sink assessment methodology based on a hubs and clusters approach to identify favourable regions for CCS deployment and attract renewed public and political interest in viable deployment pathways. Here, we apply this methodology to Spain, where fifteen emission hubs from both the power and the hard-to-abate industrial sectors are identified as potential CO2 sources. A priority storage structure and two reserves for each hub are selected based on screening and ranking processes using a multi-criteria decision-making method. The priority source-to-sink clusters are identified indicating four potential development regions, with the North-Western and North-Eastern Spain recognised as priority regions due to resilience provided by different types of CO2 sources and geological structures. Up to 68.7 Mt CO2 per year, comprising around 21% of Spanish emissions can be connected to clusters linked to feasible storage. CCS, especially in the hard-to-abate sector, and in combination with other low-carbon energies (e.g., blue hydrogen and bioenergy), remains a significant and unavoidable contributor to the Paris Agreement’s mid-century net-zero target. This study shows that the hubs and clusters approach can facilitate CCS deployment in Spain and other hydrocarbon limited countries."
+
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 09-10-2021
+categories: [CO2, Carbon Capture and Storage]
+image: featured.jpg
+doi: "10.1016/j.apenergy.2021.117418"
+publication: '*Applied Energy*'
+url_code: ""
+url_dataset: ""
+url_pdf: "https://www.sciencedirect.com/science/article/pii/S030626192100814X/pdfft?md5=9e1e17562b504070116e0a8dc4d1689a&pid=1-s2.0-S030626192100814X-main.pdf"
+url_poster: ""
+url_slides: ""
+url_source: ""
+url_video: ""
+draft: false
+---

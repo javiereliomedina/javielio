@@ -1,0 +1,26 @@
+---
+title: "Application of airborne geophysical survey data in a logistic regression model to improve the predictive power of geogenic radon maps. A case study in Castleisland, County Kerry, Ireland"
+
+abstract: "In this study, a novel methodology was investigated to improve the spatial resolution and predictive power of geogenic radon maps. The data inputs comprise indoor radon measurements and seven geogenic factors including geological data (i.e. bedrock and Quaternary geology, aquifer type and soil permeability) and airborne geophysical parameters (i.e. magnetic field strength, gamma-ray radiation and electromagnetic resistivity). The methodology was tested in Castleisland southwest Ireland, a radon-prone area identified based on the results of previous indoor radon surveys. The developed model was capable of justifying almost 75 % of the variation in geogenic radon potential. It was found that the attributes with the greatest statistical significance were equivalent uranium content (EqU) and soil permeability. A new radon potential map was produced at a higher spatial resolution compared with the original map, which did not include geophysical parameter data. In the final step, the activity of radon in soil gas was measured at 87 sites, and the correlation between the observed soil gas radon and geophysical properties was evaluated. The results indicate that any model using only geophysical data cannot accurately predict soil radon activity and that geological information should be integrated to achieve a successful prediction model. Furthermore, we found that EqU is a better indicator for predicting indoor radon potential than the measured soil radon concentrations."
+
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 10-10-2023
+categories: [Radon, ]
+image: featured.jpg
+doi: "10.1016/j.scitotenv.2023.164965"
+publication: '*Sciences of the Total Environment*'
+url_code: ""
+url_dataset: ""
+url_pdf: ""
+url_poster: ""
+url_project: ""
+url_slides: ""
+url_source: ""
+url_video: ""
+draft: false
+---
