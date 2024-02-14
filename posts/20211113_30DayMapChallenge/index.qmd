@@ -1,0 +1,89 @@
+---
+title: "Day 13 of the #30DayMapChallenge - Track"
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 11-13-2019
+categories: [R, Data visualization, 30DayChallenge]
+image: featured.jpg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+I plotted an interactive map with R.
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                        warning = FALSE,
+                        message = FALSE)
+```
+
+Load packages we are going to use:
+
+```{r}
+
+  library(sf)
+  library(geojsonsf)
+  library(tidyverse)
+  library(leaflet)
+
+```
+
+1)  Download roads (OSi - National 250k Map of Ireland) from the [*Ordnance Survey Ireland*](https://www.osi.ie/)
+
+```{r data}
+  
+
+roads_250k_path <- "Roads_-_National_250k_Map_Of_Ireland.geojson"
+
+roads_250k <- geojsonsf::geojson_sf(roads_250k_path)  |> 
+  mutate(RTT = as.factor(RTT))  |> 
+  mutate(RTT_name = factor(recode(RTT,
+                                  "-32768" = "Null",
+                                  "984"    = "Local Route",
+                                  "14"     = "Primary Route",
+                                  "15"     = "Secondary Route",
+                                  "16"     = "National Motorway"),
+                           levels = c(
+                             "Null",
+                             "Local Route",
+                             "Primary Route",
+                             "Secondary Route",
+                             "National Motorway")
+  ) 
+  )
+
+  
+```
+
+2)  Plot the map
+
+```{r map}
+
+  p_popup <- paste("<strong> OBJECTID: </strong>", roads_250k$OBJECTID, "<br>",
+                   "<strong> RTT: </strong>", roads_250k$RTT_name, "<br>",
+                   "<strong> LEN: </strong>", round(roads_250k$LEN, 2), "km")
+  pal_fun <- colorFactor("YlOrRd", NULL, n = 4)
+  road_250k_map <- leaflet() %>%
+    addPolylines(data = roads_250k, 
+                 stroke = TRUE,
+                 weight = 2,
+                 col = ~pal_fun(roads_250k$RTT_name),
+                 fillOpacity = 0.5,
+                 highlightOptions = highlightOptions(color = "blue",
+                                                     weight = 3,
+                                                     bringToFront = TRUE),
+                 label = paste("OBJECTID:", roads_250k$OBJECTID),
+                 popup = p_popup) %>%
+    addTiles() %>%
+    addLegend(data = roads_250k,
+              pal = pal_fun,
+              values = ~RTT_name,
+              opacity = 1,
+              title = "Roads - OSi National 250k Map of Ireland")
+  road_250k_map
+  
+```
+

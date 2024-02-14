@@ -1,0 +1,80 @@
+---
+title: "Day 4 of the #30DayMapChallenge - Hexagons"
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 11-04-2019
+categories: [R, Data visualization, 30DayChallenge]
+image: featured.jpeg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+```{r setup, include = FALSE}
+  knitr::opts_chunk$set(echo = TRUE,
+                        warning = FALSE,
+                        message = FALSE)
+    
+  library(sf)
+  library(tidyverse)
+```
+
+I made a hexagon tessellation of a region (e.g.Iberian Peninsula):
+
+1)  Download country data from [Eurostat](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data).
+
+```{r data}
+  
+  World_URL <- "https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/countries/download/ref-countries-2016-60m.shp.zip"
+  dir.create("Rdata")
+  download.file(World_URL, destfile = "Rdata/World.zip")
+  unzip(zipfile = "Rdata/World.zip", exdir   = "Rdata/World")
+  unzip(zipfile = "Rdata/World/CNTR_RG_60M_2016_4326.shp.zip",
+        exdir   = "Rdata/World_SHP")
+  World <- read_sf("Rdata/World_SHP/CNTR_RG_60M_2016_4326.shp")
+  unlink("Rdata", recursive = TRUE)
+  
+```
+
+2)  From the world map select Spain and Portugal (SP)
+
+```{r hexagons}
+
+  SP <- World %>%
+    filter(NAME_ENGL == "Spain" | NAME_ENGL == "Portugal") %>%
+    st_cast("POLYGON") 
+```
+
+3)  Remove islands (e.g. Canary Islands) and small territories. I calculated the area of each polygon and then I selected the polygons which have more than 4,000 km^2^. Finally I merged the resulting polygons for obtaining the Iberian Peninsula (IB).
+
+```{r}
+
+  IB <- SP %>%
+    mutate(Area = units::set_units(st_area(SP), km^2)) %>%
+    filter(Area > units::set_units(4000, km^2)) %>%
+    st_union()
+
+```
+
+4)  Make hexagons
+
+```{r}
+ 
+  Grids <- st_make_grid(IB, cellsize = .2, what = "polygons", square = FALSE) %>%
+      st_sf()
+
+```
+
+5)  Plot the results
+
+```{r}
+
+  ggplot() +
+      geom_sf(data = Grids, col = "red") +
+      geom_sf(data = IB, alpha = 1, colour = "black", fill = NA, size = 0.5) +
+      labs(title = "Hexagon tessellation of the Iberian Peninsula") 
+  
+```
+
