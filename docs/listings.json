@@ -3,6 +3,7 @@
     "listing": "/publications.html",
     "items": [
       "/publications/2022_Elio_et_al_ICCSA/index.html",
+      "/publications/2023_Dardac_STOEN/index.html",
       "/publications/2023_Elio_et_al_ARI/index.html",
       "/publications/2021_Sun_et_al_AE/index.html",
       "/publications/2020_Elio_et_al_JERA/index.html",
@@ -15,9 +16,11 @@
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/2021_11_05_30DayMapChallenge/index.html",
-      "/posts/2021_11_04_30DayMapChallenge/index.html",
-      "/posts/2021_11_03_30DayMapChallenge/index.html"
+      "/posts/20211113_30DayMapChallenge/index.html",
+      "/posts/20211106_30DayMapChallenge/index.html",
+      "/posts/20211105_30DayMapChallenge/index.html",
+      "/posts/20211104_30DayMapChallenge/index.html",
+      "/posts/20211103_30DayMapChallenge/index.html"
     ]
   },
   {
