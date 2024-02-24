@@ -1,0 +1,90 @@
+---
+title: "Day 14 of the #30DayMapChallenge - Boundaries"
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 11-14-2019
+categories: [R, Data visualization, 30DayChallenge]
+image: featured.jpg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+I tested [cartography](https://github.com/riatelab/cartography).
+
+```{r setup, include = FALSE}
+
+  knitr::opts_chunk$set(echo = TRUE,
+                        warning = FALSE,
+                        message = FALSE)
+```
+
+Load packages:
+
+```{r}
+  
+  library(sf)
+  library(cartography)
+
+```
+
+```{r, fig.height=10, fig.width=10}
+  
+# path to the geopackage file embedded in cartography
+  path_to_gpkg <- system.file("gpkg/mtq.gpkg", package="cartography")
+
+# import to an sf object
+  mtq <- st_read(dsn = path_to_gpkg, quiet = TRUE)
+
+# Compute the population density (inhab./km2) using sf::st_area()
+  mtq$POPDENS <- as.numeric(1e6 * mtq$POP / st_area(mtq))
+
+# Get a SpatialLinesDataFrame of countries borders
+  mtq.contig <- getBorders(mtq)
+  
+# get the figure ratio
+  sizes <- getFigDim(x = mtq, width = 1200, mar = c(0, 0, 1.2, 0))
+  
+# plot municipalities (only the backgroung color is plotted)
+  plot(st_geometry(mtq), col = NA, border = NA, bg = "lightblue1", 
+       xlim = c(690574, 745940))
+
+# Plot the population density with custom breaks
+  choroLayer(x = mtq,
+             var = "MED",
+             breaks = c(min(mtq$MED), seq(13000, 21000, 2000), max(mtq$MED)),
+             col = carto.pal("green.pal", 6),
+             border = "white",
+             lwd = 0.5, 
+             legend.pos = "topright",
+             legend.title.txt = "Median Income\n(euros)",
+             add = TRUE)
+# Plot discontinuities
+  discLayer(
+    x = mtq.contig, 
+    df = mtq, 
+    var = "MED",
+    type = "rel", 
+    method = "geom", 
+    nclass = 3,
+    threshold = 0.4,
+    sizemin = 0.7, 
+    sizemax = 6, 
+    col = "red4",
+    legend.values.rnd = 1, 
+    legend.title.txt = "Relative\nDiscontinuities", 
+    legend.pos = "right",
+    add = TRUE
+  )
+# Layout
+  layoutLayer(title = "Wealth Disparities in Martinique, 2015", 
+              author =  paste0("cartography ", packageVersion("cartography")),
+              sources = "Sources: Insee and IGN, 2018",
+              frame = FALSE, scale = 5, tabtitle = TRUE,theme = "grey.pal")
+# north arrow
+  north(pos = "topleft")
+  
+```
+

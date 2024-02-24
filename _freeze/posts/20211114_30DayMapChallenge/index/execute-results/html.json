@@ -1,0 +1,17 @@
+{
+  "hash": "2ca0d3245cd6722772de5d54eb349af8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Day 14 of the #30DayMapChallenge - Boundaries\"\nauthor: \n  - name: Javier Elío\n    url: https://github.com/javiereliomedina\n    orcid: 0000-0003-0624-2345\n    affiliation: Western Norway University of Applied Sciences\n    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio \ndate: 11-14-2019\ncategories: [R, Data visualization, 30DayChallenge]\nimage: featured.jpg\ndraft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!\n---\n\n\nI tested [cartography](https://github.com/riatelab/cartography).\n\n\n\n\n\nLoad packages:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n  library(sf)\n  library(cartography)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n# path to the geopackage file embedded in cartography\n  path_to_gpkg <- system.file(\"gpkg/mtq.gpkg\", package=\"cartography\")\n\n# import to an sf object\n  mtq <- st_read(dsn = path_to_gpkg, quiet = TRUE)\n\n# Compute the population density (inhab./km2) using sf::st_area()\n  mtq$POPDENS <- as.numeric(1e6 * mtq$POP / st_area(mtq))\n\n# Get a SpatialLinesDataFrame of countries borders\n  mtq.contig <- getBorders(mtq)\n  \n# get the figure ratio\n  sizes <- getFigDim(x = mtq, width = 1200, mar = c(0, 0, 1.2, 0))\n  \n# plot municipalities (only the backgroung color is plotted)\n  plot(st_geometry(mtq), col = NA, border = NA, bg = \"lightblue1\", \n       xlim = c(690574, 745940))\n\n# Plot the population density with custom breaks\n  choroLayer(x = mtq,\n             var = \"MED\",\n             breaks = c(min(mtq$MED), seq(13000, 21000, 2000), max(mtq$MED)),\n             col = carto.pal(\"green.pal\", 6),\n             border = \"white\",\n             lwd = 0.5, \n             legend.pos = \"topright\",\n             legend.title.txt = \"Median Income\\n(euros)\",\n             add = TRUE)\n# Plot discontinuities\n  discLayer(\n    x = mtq.contig, \n    df = mtq, \n    var = \"MED\",\n    type = \"rel\", \n    method = \"geom\", \n    nclass = 3,\n    threshold = 0.4,\n    sizemin = 0.7, \n    sizemax = 6, \n    col = \"red4\",\n    legend.values.rnd = 1, \n    legend.title.txt = \"Relative\\nDiscontinuities\", \n    legend.pos = \"right\",\n    add = TRUE\n  )\n# Layout\n  layoutLayer(title = \"Wealth Disparities in Martinique, 2015\", \n              author =  paste0(\"cartography \", packageVersion(\"cartography\")),\n              sources = \"Sources: Insee and IGN, 2018\",\n              frame = FALSE, scale = 5, tabtitle = TRUE,theme = \"grey.pal\")\n# north arrow\n  north(pos = \"topleft\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=960}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

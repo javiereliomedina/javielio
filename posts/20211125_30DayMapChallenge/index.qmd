@@ -1,0 +1,123 @@
+---
+title: "Day 25 of the #30DayMapChallenge - Climate"
+author: 
+  - name: Javier Elío
+    url: https://github.com/javiereliomedina
+    orcid: 0000-0003-0624-2345
+    affiliation: Western Norway University of Applied Sciences
+    affiliation-url: https://www.hvl.no/en/employee/?user=Javier.Elio 
+date: 11-25-2019
+categories: [R, Data visualization, 30DayChallenge]
+image: featured.jpg
+draft: false setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+
+```
+
+Packages we are going to use:
+
+```{r}
+
+  library(raster)
+  library(animation)
+  library(ncdf4)
+  library(sf)
+  library(ggplot2)
+  library(rworldmap)
+  library(rworldxtra)
+
+```
+
+Firstly, I have downloaded the monthly average temperatures from [ECMWF](https://cds.climate.copernicus.eu/cdsapp#!/home). You may need to register for the Climate Data Store - CDS, but it is free and there are plenty of interesting datasets!. I have download the [*Climate data for the European energy sector from 1979 to 2016 derived from ERA-Interim*](https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-european-energy-sector?tab=overview):
+
+-   Variable: Air temperature
+-   Time aggregation: month average
+-   Vertical level: 2 m
+-   Bias correction: Normal distribution adjustment
+-   Format: Zip file
+
+Then, we need to load the data into R. I have created a vector (*years*) with dates from Feb. 1979 to Dec. 2016, we will use it for adding the date (year, month) to the rasters of temperature distribution (resolution 0.5° x 0.5°).
+
+```{r}
+
+# Vector with years and months
+  years <- seq(as.Date("1979/01/01"), as.Date("2016/12/01"), by = "month")
+  years <- format(years, "%Y-%m")
+  
+# Load the temperatures as a list with raster layers 
+  temp_m <- list()
+  for (i in seq_along(years)) {
+    temp_m[i] <- raster("H_ERAI_ECMW_T159_TA-_0002m_Euro_22W27N_45E72N_050d_IN_TIM_19790101_20161231_01m_NA-_nbc_org_NA_NA-.nc", i)
+  }
+  temp_m <- brick(temp_m)
+
+# Convert to a data frame with rasters
+  raster_df <- as.data.frame(temp_m, xy = TRUE)
+  
+```
+
+We also need to load the world map for plotting the temperatures, in this case I have used the R package *rworldmap*.
+
+```{r}
+
+world <- rworldmap::getMap(resolution = "high") %>% 
+  st_as_sf() # Convert to an sf object
+
+```
+
+Finally, I have created an auxiliary function (*steps(i)*) for plotting the monthly average temperatures. We will use it for plotting the temperatures by month (i.e. Jan. 2016) and for making animations (i.e. monthly average temperatures in 2016). The function (*steps(i)*) will plot the temperature in the month *i = 1, 2, ..., 456*, where 1 = 1979-01; 2 = 1979-02, ..., and 456 = 2016-12.
+
+```{r}
+
+steps <- function(i) {
+    p <- ggplot() +
+      geom_sf(data = world, fill = "grey") +
+      geom_raster(data = raster_df,
+                  aes(x = x, y = y, fill = raster_df[[i+2]])) +
+      scale_fill_gradient2("Temp [C]",
+                          low = 'blue',
+                          mid = "white",
+                          high = 'red',
+                          na.value = NA,
+                          limits = c(-35, 35)) +
+      coord_sf(xlim = c(-10, 45), ylim = c(30, 71)) +
+      labs(title = "Climate data for the European energy sector",
+           subtitle = paste("Year:", years[i]),
+           caption = "Source: European Centre for Medium-Range Weather Forecasts (ECMWF)")
+    print(p) 
+  }
+
+```
+
+Average temperatures in Jan. 2016.
+
+```{r}
+
+steps(445)
+
+```
+
+For the animation I loop the function *steps* from 445 (Jan. 2016) to 456 (Dic. 2016), and save the result as *.gif*:
+
+```{r, results=FALSE}
+
+animation::saveGIF(for(i in 445:456) steps(i), 
+                     interval = 0.2,
+                     movie.name = "Day25_Temp_AV_month_2m_2016.gif")
+
+```
+
+```{r, echo = FALSE,  file_list, out.width = '70%', fig.align = "center"}
+
+knitr::include_graphics("Day25_Temp_AV_month_2m_2016.gif")
+
+```
+
+
