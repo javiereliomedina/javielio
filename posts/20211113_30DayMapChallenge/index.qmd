@@ -10,19 +10,17 @@ date: 11-13-2019
 categories: [R, Data visualization, 30DayChallenge]
 image: featured.jpg
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+execute:
+  warning: false
+  message: false
 ---
 
 I plotted an interactive map with R.
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE,
-                        warning = FALSE,
-                        message = FALSE)
-```
-
 Load packages we are going to use:
 
 ```{r}
+
 
   library(sf)
   library(geojsonsf)
